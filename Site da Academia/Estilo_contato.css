@@ -123,10 +123,10 @@
 .usuario-btn a svg {
   width: 30px;
   height: 30px;
-  fill: #ff6600;
+  fill: #000;
   transition: fill 0.3s ease;
 }
 
 .usuario-btn a:hover svg {
-  fill: #000;
+  fill: hsl(24, 100%, 50%);
 }
