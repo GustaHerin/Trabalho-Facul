@@ -30,9 +30,29 @@
     </nav>
   </header>
 
-  <div class="banner">
-    <h1>Transforme seu corpo e sua mente</h1>
-  </div>
+ <div class="banner" id="banner">
+  <h1>Transforme seu corpo e sua mente</h1>
+</div>
+
+<script>
+  const imagens = [
+    'fotos/banner1.jpg',
+    'fotos/banner2.jpg',
+    'fotos/banner3.jpg',
+  ];
+
+  let index = 0;
+  const banner = document.getElementById('banner');
+
+  function trocarImagem() {
+    banner.style.backgroundImage = `url('${imagens[index]}')`;
+    index = (index + 1) % imagens.length;
+  }
+
+  trocarImagem(); 
+  setInterval(trocarImagem, 5000);
+</script>
+
 
   <br>
   <section id="sobre" class="sobre">
