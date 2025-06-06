@@ -5,6 +5,23 @@
     font-family: 'Montserrat', sans-serif;
   }
   
+.usuario-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.usuario-btn a svg {
+  width: 30px;
+  height: 30px;
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.usuario-btn a:hover svg {
+  fill: #ff6600;
+}
+
   body {
     background-color: #f4f4f4;
     color: #333;
