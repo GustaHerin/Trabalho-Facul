@@ -4,13 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastro | Academia GusGyn</title>
-  <link rel="stylesheet" href="Cadastro.css">
+  <link rel="stylesheet" href="Estilo_inicial.css">
+  <link rel="stylesheet" href="Cadrasto.css">
 </head>
 <body>
 
-  <div class="form-container">
-    <h1>Cadastro de Aluno</h1>
-    <form id="cadastroForm" action="pagamento.html" method="GET">
+  <header>
+    <h1><b>Academia GusGyn</b></h1>
+    <nav>
+      <b><a href="index.html">Início</a></b>
+      <b><a href="Sobre.html">Sobre</a></b>
+      <b><a href="Planos.html">Planos</a></b>
+      <b><a href="Contato.html">Contato</a></b>
+    </nav>
+  </header>
+
+  <div class="cadastro-container">
+    <h2>Cadastro de Aluno</h2>
+    <form action="#" method="post">
       <label for="nome">Nome Completo</label>
       <input type="text" id="nome" name="nome" required>
 
@@ -18,22 +29,28 @@
       <input type="email" id="email" name="email" required>
 
       <label for="telefone">Telefone</label>
-      <input type="tel" id="telefone" name="telefone" required>
+      <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
 
-      <label for="dataNascimento">Data de Nascimento</label>
-      <input type="date" id="dataNascimento" name="dataNascimento" required>
+      <label for="idade">Idade</label>
+      <input type="number" id="idade" name="idade" min="10" max="100" required>
 
       <label for="plano">Plano</label>
       <select id="plano" name="plano" required>
-        <option value="">Escolha um plano</option>
+        <option value="">Selecione um plano</option>
         <option value="mensal">Mensal</option>
         <option value="trimestral">Trimestral</option>
         <option value="anual">Anual</option>
       </select>
 
-      <button type="submit">Ir para pagamento</button>
+      <button type="submit">Cadastrar</button>
     </form>
+
+    <a href="index.html" class="voltar">← Voltar para o Início</a>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Academia GusGyn. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>

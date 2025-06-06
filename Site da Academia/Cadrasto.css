@@ -1,62 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-body {
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.form-container {
-  background: white;
+    .cadastro-container {
+  background-color: white;
+  max-width: 500px;
+  margin: 50px auto;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.form-container h1 {
-  margin-bottom: 20px;
+.cadastro-container h2 {
   text-align: center;
+  margin-bottom: 30px;
   color: #ff6600;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 5px;
+.cadastro-container label {
+  display: block;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
-input, select {
-  padding: 10px;
+.cadastro-container input,
+.cadastro-container select {
+  width: 100%;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
 }
 
-button {
+.cadastro-container button {
   background-color: #ff6600;
   color: white;
-  border: none;
   padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
   font-size: 16px;
-  transition: background 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #e65c00;
+.cadastro-container button:hover {
+  background-color: #e65500;
+}
+
+.voltar {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.voltar:hover {
+  text-decoration: underline;
 }
