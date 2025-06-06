@@ -11,6 +11,24 @@
   right: 20px;
 }
 
+.usuario-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.usuario-btn a svg {
+  width: 30px;
+  height: 30px;
+  fill: #ff6600; /* cor padrão da pessoinha */
+  transition: fill 0.3s ease;
+}
+
+.usuario-btn a:hover svg {
+  fill: #000; /* muda pra preto quando passa o mouse */
+}
+
+
 .usuario-btn a svg {
   width: 30px;
   height: 30px;
