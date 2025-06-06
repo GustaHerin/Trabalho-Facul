@@ -1,58 +1,62 @@
-    .cadastro-container {
-  background-color: white;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.cadastro-container h2 {
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 30px;
   color: #ff6600;
 }
 
-.cadastro-container label {
-  display: block;
-  margin-bottom: 8px;
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-.cadastro-container input,
-.cadastro-container select {
-  width: 100%;
-  padding: 12px;
+input, select {
+  padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 16px;
 }
 
-.cadastro-container button {
+button {
   background-color: #ff6600;
   color: white;
-  padding: 12px;
   border: none;
-  border-radius: 10px;
-  width: 100%;
-  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
-.cadastro-container button:hover {
-  background-color: #e65500;
-}
-
-.voltar {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-.voltar:hover {
-  text-decoration: underline;
+button:hover {
+  background-color: #e65c00;
 }
