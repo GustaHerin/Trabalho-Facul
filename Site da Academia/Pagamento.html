@@ -22,24 +22,59 @@
         <option value="anual">Anual - R$999</option>
       </select>
 
-      <label for="cartao">Número do cartão:</label>
-      <input type="text" id="cartao" name="cartao" maxlength="16" placeholder="0000 0000 0000 0000" required>
+      <label for="pagamento">Método de pagamento:</label>
+      <select id="pagamento" name="pagamento" required onchange="alternarMetodoPagamento()">
+        <option value="">Selecione</option>
+        <option value="cartao">Cartão de Crédito</option>
+        <option value="pix">Pix</option>
+      </select>
 
-      <div class="linha-dupla">
-        <div>
-          <label for="validade">Validade:</label>
-          <input type="text" id="validade" name="validade" maxlength="5" placeholder="MM/AA" required>
+      <div id="cartao-section">
+        <label for="cartao">Número do cartão:</label>
+        <input type="text" id="cartao" name="cartao" maxlength="16" placeholder="0000 0000 0000 0000">
+
+        <div class="linha-dupla">
+          <div>
+            <label for="validade">Validade:</label>
+            <input type="text" id="validade" name="validade" maxlength="5" placeholder="MM/AA">
+          </div>
+          <div>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123">
+          </div>
         </div>
-        <div>
-           <label for="cvv">CVV:</label>
-          <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" required>
-        </div>
+      </div>
+
+      <div id="pix-section" style="display: none;">
+        <p>Escaneie o QR Code abaixo com seu app de banco:</p>
+        <img src="qrcode-pix.png" alt="QR Code Pix" style="width: 200px; height: 200px;"/>
+        <p>Ou copie a chave Pix:</p>
+        <input type="text" readonly value="chavepix@gusgyn.com" style="width: 100%; padding: 10px;">
       </div>
 
       <button type="submit">Pagar agora</button>
 
     </form>
   </div>
+
+  <script>
+    function alternarMetodoPagamento() {
+      const metodo = document.getElementById('pagamento').value;
+      const secaoCartao = document.getElementById('cartao-section');
+      const secaoPix = document.getElementById('pix-section');
+
+      if (metodo === 'cartao') {
+        secaoCartao.style.display = 'block';
+        secaoPix.style.display = 'none';
+      } else if (metodo === 'pix') {
+        secaoCartao.style.display = 'none';
+        secaoPix.style.display = 'block';
+      } else {
+        secaoCartao.style.display = 'none';
+        secaoPix.style.display = 'none';
+      }
+    }
+  </script>
 
 </body>
 </html>
